@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns="">
+
+<xsd:simpleType name="chaine">
+	<xsd:restriction base="xsd:String">
+		<xsd:maxLength value="150"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name= "DescriptionCours">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="intitule" type = "chaine"/>
+			<xsd:element name="UE" type = "chaine"/>
+			<xsd:element name= "chargeTravail">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="credits" type = "valeur"/>
+                        <xsd:element name="coeff" type = "valeur"/>
+                            <xsd:complexType  name= "volumeHoraire">
+                                <xsd:all>
+                                    <xsd:element name="TPE" type = "xsd:positiveInteger"/>
+                                    <xsd:element name="CM" type = "xsd:positiveInteger"/>
+                                    <xsd:element name="TDTP" type = "xsd:positiveInteger"/>
+                                </xsd:all>
+                            </xsd:complexType>
+            
+                    </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+               <xsd:element name="semestre" type = "chaine"/>
+                <xsd:element name="niveau" type = "chaine"/>
+               <xsd:element name="prerequis" type = "chaine"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+<!--xsd:element name= "enseignant"-->
+ <xsd:complexType name="Ensseignant">
+ <xsd:simpleContent>
+ <xsd:attribute name="matricule" type="chaine"/>
+ </xsd:simpleContent>
+ </xsd:complexType>
+ 
+<xsd:element name= "Enseignants" maxOccurs="unbounded">
+	<xsd:complexType>
+
+		<xsd:sequence>
+			<xsd:element name="enseignant" type = "Enseignant" maxOccurs="unbounded"/>
+			<xsd:element name="prenom" type = "chaine"/>
+			<xsd:element name="nom" type = "xsd:date"/>
+            <xsd:element name="adressBureau" type = "chaine"/>
+			<xsd:element name="courriel" type = "chaine"/>
+			<xsd:element name="heure" type = "chaine"/>
+            <xsd:attribute name="nombre" type="xsd:positiveInteger"/>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name= "LieuHoraire">
+  <xsd:complexType>
+     <xsd:sequence>
+        <xsd:element name="salleCours" type = "chaine"/>
+        <xsd:element name="heureDeb" type = "xsd:time"/>
+        <xsd:element name="heureFin" type = "xsd:time"/>
+      </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+<xsd:element name= "Cours">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="description" type = "DescriptionCours"/>
+            <xsd:element name="enseignants" type = "Enseignants"/>
+            <xsd:element name="lieuHoraire" type = "LieuHoraire"/>
+        </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:complexType name="Syllabus">
+    <xsd:sequence>
+     <xsd:element name="cours" type = "Cours" maxOccurs="unbounded"> </xsd::element>
+    </xsd:sequencet>
+</xsd:complexType>
+
+ </xsd:schema>
+

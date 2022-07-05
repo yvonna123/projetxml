@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-model href="file.dtd" type="application/xml-dtd"?>
+<?xml-model href="file.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+<Syllabus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:SchemaLocation="syllabus.xsd">
+    <cours>    
+       <description >
+            <intitule >Introduction à l'IA </intitule > 
+            <UE >Web et IA  INF 414</UE > 
+            <chargeTravail > 
+                <credits > 6 </credits > 
+                <coeff > 2 </coeff > 
+                <volumeHoraire > 
+                    <CM > 15 </CM > 
+                    <TDTP > 15 </TDTP > 
+                    <TPE > 30 </TPE > 
+                </volumeHoraire > 
+            </chargeTravail > 
+            <semestre > Semestre 1 </semestre > 
+            <niveau > Master 1  </niveau > 
+            <prerequis > </prerequis > 
+        </description > 
+
+        <enseignants nombre="1">
+            <enseignant matricule="124C" > </enseignant > 
+            <prenom >Francois </prenom > 
+            <nom >Kaly </nom > 
+            <adressBureau >B6 </adressBureau > 
+            <courriel >francois.kaly@univ-thies.sn </courriel > 
+            <heure > 12H-15H</heure > 
+
+        </enseignants > 
+
+        <lieuHoraire >
+            <salleCours > Salle info</salleCours > 
+            <heureDeb > 15H 00</heureDeb > 
+            <heureFin > 18H 00</heureFin > 
+        </lieuHoraire > 
+     
+    </cours>
+ </Syllabus>

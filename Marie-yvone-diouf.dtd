@@ -1,0 +1,33 @@
+<?xml version="1.0"encoding="UTF-8" ?>
+
+<!ELEMENT Syllabus (cours+)>
+	<!ELEMENT cours (description, enseignants+) >
+		<!ELEMENT description (intitule, UE, chargeTravail, semestre, niveau, prerequis)>
+			<!ELEMENT intitule (#PCDATA) >
+			<!ELEMENT UE (#PCDATA) >
+            <!ELEMENT semestre (#PCDATA) >
+            <!ELEMENT niveau (#PCDATA) >
+            <!ELEMENT prerequis (#PCDATA) >
+            <!ELEMENT chargeTravail (credits, coeff, volumeHoraire ) >
+               <!ELEMENT credits (#PCDATA) >
+                <!ELEMENT coeff (#PCDATA) >
+                 <!ELEMENT volumeHoraire (TPE, TDTP, CM) >
+                    <!ELEMENT TPE (#PCDATA) >
+                    <!ELEMENT TDTP (#PCDATA) >
+                    <!ELEMENT CM (#PCDATA) >
+        <!ELEMENT enseignants (enseignant, prenom, nom, adressBureau, courriel, heure) > 
+            <!ELEMENT enseignant (#PCDATA) >
+            <!ATTLIST enseignant matricule ID #REQUIRED >
+			<!ELEMENT prenom (#PCDATA) >
+            <!ELEMENT nom (#PCDATA) >
+            <!ELEMENT adressBureau (#PCDATA) >
+            <!ELEMENT courriel (#PCDATA) >
+            <!ELEMENT heure (#PCDATA) >              
+			<!ATTLIST enseignants nombre  ID #REQUIRED >
+	    <!ELEMENT lieuHoraire (salleCours, heureDeb, heureFin) >
+			<!ELEMENT salleCours (#PCDATA) >
+            <!ELEMENT heureDeb (#PCDATA) >
+   			<!ELEMENT heureFin (#PCDATA) >
+         
+
+		
